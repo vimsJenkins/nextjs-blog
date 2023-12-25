@@ -1,27 +1,43 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: auto;
+  padding: 0 10%;
+}
+body form {
+  padding: 10px;
+}
+
+body form label * {
+  display: inline-block;
+}
+
+body form >*{
+  display: block;
+}
+body form input[type='text'], body form select {
+  border: 1px solid #161414;
+  padding: 5px 8px;
+  width: 320px;
+}
+table {
+  width: 370px;
+}
+
+table tr>* {
+  text-align: left;
+  padding: 5px 8px;
+}
+
+table tr th[colspan="2"]{
+  text-align: center;
+  background-color: #d3d3d3;
+}
+form.create-product {
+  border: 1px solid #d3d3d3;
+  width: 350px;
+}
+form.create-product label {
+  padding: 10px 0px;
+}
+form.create-product label * {
+  display: block;
 }
